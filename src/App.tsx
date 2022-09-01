@@ -11,7 +11,7 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <p>I am Michael Snead OOooOOOooO</p>
+            <p>I am Michael Snead OOooOOOooOo</p>
         </div>
     );
 }
