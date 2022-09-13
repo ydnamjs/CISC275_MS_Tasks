@@ -45,8 +45,6 @@ export function shout(message: string): string {
  */
 export function isQuestion(message: string): boolean {
     let ret = message[message.length - 1] === "?" ? true : false;
-    console.log(message[message.length - 1]);
-    console.log(ret);
 
     return ret;
 }
@@ -57,5 +55,11 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    word = word.toLowerCase();
+    if (word === "yes") {
+        return true;
+    } else if (word === "no") {
+        return false;
+    }
+    return null;
 }
