@@ -21,7 +21,7 @@ export function bookEndList(numbers: number[]): number[] {
  * number has been tripled (multiplied by 3).
  */
 export function tripleNumbers(numbers: number[]): number[] {
-    const newNumbers = numbers.map((n: number): number => n * 3);
+    const newNumbers: number[] = numbers.map((n: number): number => n * 3);
 
     return newNumbers;
 }
@@ -31,7 +31,11 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return [];
+    const newNumbers = numbers.map((word: string): number =>
+        isNaN(parseInt(word)) ? 0 : parseInt(word)
+    );
+
+    return newNumbers;
 }
 
 /**
