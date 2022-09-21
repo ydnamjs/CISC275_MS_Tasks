@@ -129,5 +129,31 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    //finds the first negative value in the array if one exists otherwise assigns -1
+    const firstNegativeIndex = values.findIndex(
+        (value: number): boolean => value < 0
+    );
+    //creates a clone of the array and removes every element after the negative if there is a negative
+    const valuesReduced = [...values];
+    if (firstNegativeIndex >= 0) {
+        valuesReduced.splice(
+            firstNegativeIndex,
+            values.length - firstNegativeIndex
+        );
+    }
+    //gets the sum of the subarray without the first negative or any elements after
+    const sum = valuesReduced.reduce(
+        (currentTotal: number, num: number) => currentTotal + num,
+        0
+    );
+    //creates a clone of values and inserts the sum after the first negative if there is a first negative.
+    //If there is not, it inserts the sum at the end of the list
+    const sumAdded = [...values];
+    if (firstNegativeIndex >= 0) {
+        sumAdded.splice(firstNegativeIndex + 1, 0, sum);
+    } else {
+        sumAdded.splice(sumAdded.length + 1, 0, sum);
+    }
+    //returns the array with the sum added
+    return sumAdded;
 }
