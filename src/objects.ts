@@ -43,6 +43,18 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+    //if the question is a short answer question, any answer is valid
+    if (question.type === "short_answer_question") {
+        return true;
+    }
+    //if the question is a multiple choice question,
+    //see if the answer matches any of the options and return true if it does
+    if (
+        question.options.findIndex((option: string) => option === answer) >= 0
+    ) {
+        return true;
+    }
+    //otherwise return false
     return false;
 }
 
