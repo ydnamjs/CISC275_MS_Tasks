@@ -175,7 +175,6 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
-    console.log(points);
     const newQuestion: Question = {
         type: contentQuestion.type,
         body: contentQuestion.body,
@@ -186,7 +185,5 @@ export function mergeQuestion(
         name: name,
         id: id
     };
-    console.log({ ...newQuestion });
-    console.log(newQuestion.options);
     return newQuestion;
 }
