@@ -6,21 +6,76 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/arrays.test.ts
+PASS src/objects.test.ts
+  ● Console
+
+    console.log
+      2
+
+      at mergeQuestion (src/objects.ts:178:13)
+
+    console.log
+      {
+        type: 'short_answer_question',
+        body: 'What is 2+2?',
+        expected: '4',
+        options: [],
+        published: false,
+        points: 2,
+        name: 'More Points Addition',
+        id: 192
+      }
+
+      at mergeQuestion (src/objects.ts:189:13)
+
+    console.log
+      []
+
+      at mergeQuestion (src/objects.ts:190:13)
+
+    console.log
+      1
+
+      at mergeQuestion (src/objects.ts:178:13)
+
+    console.log
+      {
+        type: 'multiple_choice_question',
+        body: 'What shape can you make with one line?',
+        expected: 'circle',
+        options: [ 'square', 'triangle', 'circle' ],
+        published: false,
+        points: 1,
+        name: 'Less Points Shape',
+        id: 99
+      }
+
+      at mergeQuestion (src/objects.ts:189:13)
+
+    console.log
+      [ 'square', 'triangle', 'circle' ]
+
+      at mergeQuestion (src/objects.ts:190:13)
+
 PASS src/HtmlCss.test.tsx
 PASS src/functions.test.ts
 PASS src/text.test.tsx
 PASS src/App.test.tsx
---------------|---------|----------|---------|---------|-------------------
-File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------|---------|----------|---------|---------|-------------------
-All files     |     100 |      100 |     100 |     100 |                   
- App.tsx      |     100 |      100 |     100 |     100 |                   
- arrays.ts    |     100 |      100 |     100 |     100 |                   
- functions.ts |     100 |      100 |     100 |     100 |                   
---------------|---------|----------|---------|---------|-------------------
+----------------|---------|----------|---------|---------|-------------------
+File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------|---------|----------|---------|---------|-------------------
+All files       |     100 |      100 |     100 |     100 |                   
+ src            |     100 |      100 |     100 |     100 |                   
+  App.tsx       |     100 |      100 |     100 |     100 |                   
+  arrays.ts     |     100 |      100 |     100 |     100 |                   
+  functions.ts  |     100 |      100 |     100 |     100 |                   
+  objects.ts    |     100 |      100 |     100 |     100 |                   
+ src/interfaces |       0 |        0 |       0 |       0 |                   
+  question.ts   |       0 |        0 |       0 |       0 |                   
+----------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 5 passed, 5 total
-Tests:       23 passed, 23 total
+Test Suites: 6 passed, 6 total
+Tests:       33 passed, 33 total
 Snapshots:   0 total
-Time:        3.821 s
+Time:        4.098 s
 Ran all test suites.
