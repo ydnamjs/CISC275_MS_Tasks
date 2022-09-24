@@ -7,56 +7,6 @@ Browserslist: caniuse-lite is outdated. Please run:
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/arrays.test.ts
 PASS src/objects.test.ts
-  ● Console
-
-    console.log
-      2
-
-      at mergeQuestion (src/objects.ts:178:13)
-
-    console.log
-      {
-        type: 'short_answer_question',
-        body: 'What is 2+2?',
-        expected: '4',
-        options: [],
-        published: false,
-        points: 2,
-        name: 'More Points Addition',
-        id: 192
-      }
-
-      at mergeQuestion (src/objects.ts:189:13)
-
-    console.log
-      []
-
-      at mergeQuestion (src/objects.ts:190:13)
-
-    console.log
-      1
-
-      at mergeQuestion (src/objects.ts:178:13)
-
-    console.log
-      {
-        type: 'multiple_choice_question',
-        body: 'What shape can you make with one line?',
-        expected: 'circle',
-        options: [ 'square', 'triangle', 'circle' ],
-        published: false,
-        points: 1,
-        name: 'Less Points Shape',
-        id: 99
-      }
-
-      at mergeQuestion (src/objects.ts:189:13)
-
-    console.log
-      [ 'square', 'triangle', 'circle' ]
-
-      at mergeQuestion (src/objects.ts:190:13)
-
 PASS src/HtmlCss.test.tsx
 PASS src/functions.test.ts
 PASS src/text.test.tsx
@@ -77,5 +27,5 @@ All files       |     100 |      100 |     100 |     100 |
 Test Suites: 6 passed, 6 total
 Tests:       33 passed, 33 total
 Snapshots:   0 total
-Time:        4.098 s
+Time:        4.187 s
 Ran all test suites.
