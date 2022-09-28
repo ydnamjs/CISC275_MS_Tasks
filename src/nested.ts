@@ -204,7 +204,6 @@ export function renameQuestionById(
                 ? { ...question, name: newName }
                 : { ...question }
     );
-
     return renamedQuestions;
 }
 
