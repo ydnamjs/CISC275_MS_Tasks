@@ -230,6 +230,34 @@ export function changeQuestionTypeById(
     return retypedQuestions;
 }
 
+function makeThePainStop(
+    question: Question,
+    targetId: number,
+    targetOptionIndex: number,
+    newOption: string
+): Question {
+    if (question.id === targetId) {
+        if (targetOptionIndex === -1) {
+            const temp = [...question.options];
+            temp.push(newOption);
+            const ret = {
+                ...question,
+                options: [...temp]
+            };
+            //console.log(ret);
+            return ret;
+        }
+        const temp = [...question.options];
+        temp.splice(targetOptionIndex, 1, newOption);
+        const ret = {
+            ...question,
+            options: [...temp]
+        };
+        return ret;
+    }
+    return { ...question };
+}
+
 /**
  * Consumes an array of Questions and produces a new array of Questions, where all
  * the Questions are the same EXCEPT for the one with the given `targetId`. That
@@ -246,7 +274,11 @@ export function editOption(
     targetOptionIndex: number,
     newOption: string
 ): Question[] {
-    return [];
+    const renamedQuestions = questions.map(
+        (question: Question): Question =>
+            makeThePainStop(question, targetId, targetOptionIndex, newOption)
+    );
+    return renamedQuestions;
 }
 
 /***
