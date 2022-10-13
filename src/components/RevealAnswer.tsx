@@ -2,5 +2,17 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function RevealAnswer(): JSX.Element {
-    return <div>Reveal Answer</div>;
+    const [visibility, setVisible] = useState<boolean>(false);
+
+    function invertVisibility(): void {
+        setVisible(!visibility);
+    }
+
+    return (
+        <div>
+            {" "}
+            <Button onClick={invertVisibility}>Reveal Answer</Button>
+            {visibility && <div>42</div>}
+        </div>
+    );
 }
